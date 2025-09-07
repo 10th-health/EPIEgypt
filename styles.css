@@ -525,11 +525,15 @@ body.dark-theme .footer {
 /* ===== Responsive Design for Mobile ===== */
 @media (max-width: 768px) {
     .container {
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
         box-shadow: none;
         border-radius: 0;
-        padding: 15px;
+        padding: 10px;
+    }
+    body {
+        min-width: 100vw;
+        overflow-x: hidden;
     }
 
     .header-content {
