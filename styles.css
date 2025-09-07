@@ -1,0 +1,524 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    direction: rtl;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #2c5aa0 0%, #1e3c72 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.header-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Navigation Styles */
+.nav {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+    background: none;
+    border: none;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    padding: 1rem;
+}
+
+.search-container {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #dee2e6;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #2c5aa0;
+}
+
+.search-btn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #2c5aa0;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(44, 90, 160, 0.3);
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 2rem 1rem;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c5aa0;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #2c5aa0, #764ba2);
+    border-radius: 2px;
+}
+
+.content-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Typography */
+h3 {
+    color: #2c5aa0;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.8rem;
+}
+
+h4 {
+    color: #495057;
+    margin: 1.5rem 0 0.75rem 0;
+    font-size: 1.4rem;
+}
+
+h5 {
+    color: #6c757d;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Lists */
+ul, ol {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Highlight Boxes */
+.highlight-box,
+.info-box,
+.note {
+    background: #e3f2fd;
+    border: 1px solid #bde0fe;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+/* Card Styles */
+.objective-card,
+.immunity-card,
+.disease-card,
+.vaccine-card,
+.element-card,
+.equipment-card,
+.benefit-card,
+.requirement-card,
+.strategy-card,
+.method-card,
+.factor-card,
+.phase-content,
+.timeline-content {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.objective-card:hover,
+.immunity-card:hover,
+.disease-card:hover,
+.vaccine-card:hover,
+.element-card:hover,
+.equipment-card:hover,
+.benefit-card:hover,
+.requirement-card:hover,
+.strategy-card:hover,
+.method-card:hover,
+.factor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Disease & Vaccine Status/Type Tags */
+.disease-status, .vaccine-type {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.disease-status.eliminated { background: #d1fae5; color: #065f46; }
+.disease-status.controlled { background: #fef3c7; color: #92400e; }
+.disease-status.active { background: #fee2e2; color: #991b1b; }
+.vaccine-type.live { background: #dbeafe; color: #1e40af; }
+.vaccine-type.inactivated { background: #d1fae5; color: #065f46; }
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: right;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tr:hover {
+    background: #e9ecef;
+}
+
+/* Schedule & Catch-up Table Specifics */
+.age-cell, .visit-cell {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.vaccine-item {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.vaccine-item.bcg { background: #ffebee; }
+.vaccine-item.opv { background: #e8f5e8; }
+.vaccine-item.ipv { background: #fff3e0; }
+.vaccine-item.penta { background: #f3e5f5; }
+.vaccine-item.hepb { background: #e0f2f1; }
+.vaccine-item.dpt { background: #fce4ec; }
+.vaccine-item.mmr { background: #e1f5fe; }
+
+.vaccine-given { background: #d4edda; color: #155724; text-align: center; font-weight: bold; }
+.vaccine-skip { background: #f8f9fa; color: #6c757d; text-align: center; }
+
+/* Tabs */
+.tab-header {
+    display: flex;
+    margin-bottom: 2rem;
+    background: #e9ecef;
+    border-radius: 10px;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #495057;
+    transition: all 0.3s;
+    min-width: 120px;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: #2c5aa0;
+    color: white;
+    box-shadow: 0 2px 10px rgba(44, 90, 160, 0.3);
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Footer */
+.footer {
+    background: #1e3c72;
+    color: white;
+    padding: 3rem 1rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-section h4 { color: white; }
+.footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; }
+.footer-section a:hover { color: white; }
+.footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); opacity: 0.8; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-toggle { display: flex; }
+    .nav-menu { display: none; position: absolute; top: 100%; right: 0; left: 0; background: #f8f9fa; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .nav-menu.active { display: block; }
+    .nav-list { flex-direction: column; }
+    .nav-link { display: block; margin: 0.25rem 0; }
+    .objectives-grid, .diseases-grid, .vaccines-grid, .elements-grid, .equipment-grid, .benefits-grid, .requirements-grid, .strategies-grid, .methods-grid, .factors-grid { grid-template-columns: 1fr; }
+}
+
+/* === Dark Theme Styles === */
+body.dark-theme {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e2e8f0;
+}
+
+body.dark-theme .container,
+body.dark-theme .nav,
+body.dark-theme .content-card,
+body.dark-theme .objective-card,
+body.dark-theme .immunity-card,
+body.dark-theme .disease-card,
+body.dark-theme .vaccine-card,
+body.dark-theme .element-card,
+body.dark-theme .equipment-card,
+body.dark-theme .benefit-card,
+body.dark-theme .requirement-card,
+body.dark-theme .strategy-card,
+body.dark-theme .method-card,
+body.dark-theme .factor-card,
+body.dark-theme .phase-content,
+body.dark-theme .timeline-content {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark-theme .search-input,
+body.dark-theme .nav-link,
+body.dark-theme .tab-header {
+    background: #4a5568;
+    color: #e2e8f0;
+    border-color: #718096;
+}
+
+body.dark-theme .nav-link:hover,
+body.dark-theme .nav-link.active {
+    background: #8cb4ff;
+    color: #1a1a2e;
+}
+
+body.dark-theme .section-title,
+body.dark-theme h3,
+body.dark-theme .arrow,
+body.dark-theme .age-cell,
+body.dark-theme .visit-cell {
+    color: #8cb4ff;
+}
+
+body.dark-theme h4 { color: #cbd5e0; }
+body.dark-theme h5 { color: #a0aec0; }
+
+body.dark-theme .tab-btn { color: #e2e8f0; }
+body.dark-theme .tab-btn.active,
+body.dark-theme .tab-btn:hover {
+    background: #8cb4ff;
+    color: #1a1a2e;
+}
+
+/* Table Fixes */
+body.dark-theme table {
+    background: #2d3748;
+    box-shadow: none;
+}
+body.dark-theme th {
+    background: #1e3c72;
+    color: #e2e8f0;
+}
+body.dark-theme td {
+    color: #e2e8f0;
+    border-bottom: 1px solid #4a5568;
+}
+body.dark-theme tr:nth-child(even) {
+    background: #4a5568;
+}
+body.dark-theme tr:hover {
+    background: #5a6578;
+}
+
+/* Tag and Label Fixes */
+body.dark-theme .disease-status.eliminated,
+body.dark-theme .vaccine-type.inactivated,
+body.dark-theme .vaccine-given {
+    background-color: #15803d;
+    color: #dcfce7;
+}
+body.dark-theme .disease-status.controlled {
+    background-color: #b45309;
+    color: #fefce8;
+}
+body.dark-theme .disease-status.active {
+    background-color: #b91c1c;
+    color: #fee2e2;
+}
+body.dark-theme .vaccine-type.live {
+    background-color: #1d4ed8;
+    color: #dbeafe;
+}
+body.dark-theme .vaccine-skip {
+    background-color: #374151;
+    color: #9ca3af;
+}
+
+/* Schedule Table Tag Fixes (light background needs dark text) */
+body.dark-theme .vaccine-item {
+    color: #1e293b;
+}
+body.dark-theme .vaccine-item.bcg { background: #fecaca; }
+body.dark-theme .vaccine-item.opv { background: #dcfce7; }
+body.dark-theme .vaccine-item.ipv { background: #ffedd5; }
+body.dark-theme .vaccine-item.penta { background: #f5d0fe; }
+body.dark-theme .vaccine-item.hepb { background: #d1fae5; }
+body.dark-theme .vaccine-item.dpt { background: #fce7f3; }
+body.dark-theme .vaccine-item.mmr { background: #dbeafe; }
+
+/* Other minor fixes */
+body.dark-theme .highlight-box,
+body.dark-theme .info-box,
+body.dark-theme .note {
+    background: #4a5568;
+    border-color: #8cb4ff;
+}
+body.dark-theme .footer {
+    background: #1a1a2e;
+}
