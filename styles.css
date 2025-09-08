@@ -470,7 +470,7 @@ tr:hover {
     .nav-menu {
         display: none;
         position: fixed;
-        top: 100%;
+        top: 140%;
         right: 0;
         left: 0;
         background: #f8f9fa;
