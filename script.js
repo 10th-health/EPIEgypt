@@ -222,19 +222,14 @@ document.addEventListener('DOMContentLoaded', function() {
         window.print();
     });
 
-    // Show print button on larger screens
-    if (window.innerWidth > 768) {
-        printBtn.style.display = 'block';
-    }
+    // Show print button on all screens
+printBtn.style.display = 'block';
 
-    // Responsive Print Button
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            printBtn.style.display = 'block';
-        } else {
-            printBtn.style.display = 'none';
-        }
-    });
+// Keep print button visible on all screen sizes
+window.addEventListener('resize', () => {
+    printBtn.style.display = 'block';
+});
+
 
     // Local Storage for User Preferences
     const userPrefs = {
@@ -304,18 +299,14 @@ document.addEventListener('DOMContentLoaded', function() {
         controls.style.display = controls.style.display === 'none' ? 'block' : 'none';
     });
 
-    // Show accessibility button on larger screens
-    if (window.innerWidth > 768) {
-        accessibilityBtn.style.display = 'block';
-    }
+    // Show accessibility button on all screens
+accessibilityBtn.style.display = 'block';
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            accessibilityBtn.style.display = 'block';
-        } else {
-            accessibilityBtn.style.display = 'none';
-        }
-    });
+// Keep accessibility button visible on all screen sizes
+window.addEventListener('resize', () => {
+    accessibilityBtn.style.display = 'block';
+});
+
 
     // Back to Top Button
     const backToTopBtn = document.createElement('button');
