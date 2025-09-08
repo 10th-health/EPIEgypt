@@ -461,33 +461,34 @@ tr:hover {
     }
     
     /* إصلاح التنقل */
-    .nav-toggle {
-        display: flex;
-        position: relative;
-        z-index: 1001;
-    }
-    
-    .nav-menu {
-        display: none;
-        position: fixed;
-        top: 140%;
-        right: 0;
-        left: 0;
-        background: #f8f9fa;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        max-height: 70vh;
-        overflow-y: auto;
-        z-index: 1000;
-    }
-    
-    .nav-menu.active {
-        display: block;
-    }
-    
-    .nav-list {
-        flex-direction: column;
-        padding: 1rem;
-    }
+    /* --- استبدل هذا الجزء بالكامل في ملف styles.css --- */
+
+/* داخل @media (max-width: 768px) */
+
+.nav-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1001; /* تأكد أن الزر فوق كل شيء */
+}
+
+.nav-menu {
+    display: none; /* ابدأ مخفيًا */
+    position: absolute; /* غيرناه من fixed إلى absolute */
+    top: 100%; /* اجعله يبدأ مباشرة بعد شريط التنقل */
+    left: 0;
+    right: 0;
+    background: #f8f9fa;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-height: 80vh; /* ارتفاع أقصى لتجنب تغطية كل الشاشة */
+    overflow-y: auto; /* للسماح بالتمرير داخل القائمة إذا كانت طويلة */
+    z-index: 1000; /* تأكد أنه يظهر فوق المحتوى الآخر */
+}
+
+.nav-menu.active {
+    display: block; /* عند النقر، أظهره فقط */
+}
+
+/* --- نهاية الجزء المطلوب استبداله --- */
     
     .nav-link {
         display: block;
